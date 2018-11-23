@@ -1,0 +1,163 @@
+/**
+ * Layout style for general structure of header, navbar, main, footer
+ * and other regions of the page including route specific styles.
+ */
+
+/**
+ * Variables
+ */
+
+
+/**
+ * General layout
+ */
+
+.left {
+    float: left;
+}
+
+ .right {
+     float: right;
+ }
+
+.inner-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+//Header Layout
+
+.outer-wrap-header {
+    background-color: #AAB3FA;
+}
+
+.rm-desktop li a {
+    background-color: #AAB3FA;
+}
+
+.rm-desktop li a:hover {
+    background-color: #AAB3FA;
+}
+
+.inner-wrap-header {
+    max-width: 100%;
+}
+
+.region-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.region-header-col-1,
+.region-header-col-3 {
+    width: 20%;
+    float: left;
+}
+
+.region-header-col-2 {
+    width: 60%;
+    float: left;
+}
+
+.site-logo {
+    display: none;
+}
+
+.site-logo-text a {
+    color: #000;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+ .next-previous {
+     width: 50%;
+     margin: 0 auto;
+ }
+
+ .next {
+     float: right;
+ }
+
+
+//Main and sidebar layout
+
+.inner-wrap-main {
+    overflow: auto;
+}
+
+
+.region-main,
+.region-sidebar-left,
+.region-sidebar-right {
+        overflow: auto;
+}
+
+.region-main {
+    width: 70%;
+    margin-left: 10%;
+    float: left;
+
+
+    &.has-sidebar-left.has-sidebar-right {
+        width: 60%;
+    }
+
+    &.has-sidebar {
+        margin-left: 0;
+    }
+
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    width: 30%;
+    float: left;
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    width: 20%;
+}
+
+
+
+//Footer Layout
+
+.outer-wrap-footer {
+    max-width: 100%;
+    background: linear-gradient(transparent, #AAB3FA);
+}
+
+.footer-column-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-column {
+    padding: 15px;
+}
+
+.site-footer {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.byline {
+    margin: 10px auto;
+    width: 400px;
+    border: dotted 1px;
+    padding: 10px;
+    box-shadow: 1px 1px 20px #8C728C;
+    overflow: auto;
+    font-style: italic;
+}
+
+.byline p {
+    padding: 10px;
+}
