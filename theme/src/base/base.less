@@ -8,6 +8,13 @@
 html {
     overflow-y: scroll;
     background-color: @bgColorHtml;
+    font-size: 100%;
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 112.5%;
+  }
 }
 
 body {
@@ -15,7 +22,18 @@ body {
     padding: 0;
     color: @colorBody;
     background-color: @bgColorBody;
-    font: 100.01%/1 @fontFamilyBody;
+    font: 100.01%/1,5 @fontFamilyBody;
+    line-height: 1.4; //base line height
+}
+
+p {
+    font-size: 1.25em; // base font size
+    margin-bottom: 1.75rem;// base vertical spacing: (1.4 * 1.25) = 1.75
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 3.5rem; // Double the base value for a larger gap (1.75 * 2) = 3.5
 }
 
 img {

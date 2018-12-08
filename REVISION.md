@@ -1,6 +1,10 @@
 Revision history
 ========================
 
+v3.0.0 (2018-12-08)
+
+Final version of Kmom03
+
 v2.0.0 (2018-11-23)
 
 Final version of Kmom02

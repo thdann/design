@@ -4563,13 +4563,28 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 html {
   overflow-y: scroll;
   background-color: #fff;
+  font-size: 100%;
+}
+@media (min-width: 64em) {
+  html {
+    font-size: 112.5%;
+  }
 }
 body {
   margin: 0;
   padding: 0;
   color: #333;
   background-color: #fff;
-  font: 100.01%/1 serif;
+  font: 100.01%/1, 5 serif;
+  line-height: 1.4;
+}
+p {
+  font-size: 1.25em;
+  margin-bottom: 1.75rem;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 3.5rem;
 }
 img {
   max-width: 100%;
@@ -4633,9 +4648,23 @@ img {
   font-size: 2em;
   text-decoration: none;
 }
+.breadcrumb-list a {
+  font-size: 0.8em;
+}
+.breadcrumb-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb-list li {
+  display: inline-block;
+}
 .next-previous {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
+}
+.next-previous a {
+  font-size: 0.8em;
 }
 .next {
   float: right;
@@ -4712,6 +4741,9 @@ img {
   .rm-default a {
     padding-left: 0.5em;
     padding-right: 0.5em;
+  }
+  .site-logo-text a {
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 600px) {
