@@ -1,6 +1,10 @@
 Revision history
 ========================
 
+v4.0.0 (2018-12-20)
+
+Final version of Kmom04 - colors
+
 v3.0.0 (2018-12-08)
 
 Final version of Kmom03
