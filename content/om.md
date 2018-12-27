@@ -29,4 +29,4 @@ Om kursen
 
 Kursen design, kort för Teknisk webbdesign och användbarhet, är en delkurs på 7,5hp och ingår bl.a. i kurspaketet [Webbprogrammering och databaser 30hp](https://www.bth.se/kurspaket/KP852/20172/) vid Blekinge tekniska högskola.
 
-[FIGURE src=image/alessi.jpg?w=300 caption="Alessi skål i tidlös design"]
+[FIGURE src=image/alessi.jpg?w=300 caption="Alessi skål i tidlös design" class="center"]

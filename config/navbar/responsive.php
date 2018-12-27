@@ -74,5 +74,24 @@ return [
             "url" => "test",
             "title" => "Testa saker.",
         ],
+        [
+            "text" => "Blogg",
+            "url" => "blogg",
+            "title" => "Bildblogg",
+        ],
+        [
+            "text" => "Rapport",
+            "url" => "rapport",
+            "title" => "Rapporter från kursmomenten.",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Kmom04",
+                        "url" => "rapport/fargschema",
+                        "title" => "Rapport för kmom04.",
+                    ],
+                ],
+            ],
+        ],
     ],
 ];

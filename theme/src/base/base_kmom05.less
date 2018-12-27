@@ -1,0 +1,51 @@
+/**
+ * Base style to affect HTML elements on a general scale.
+ */
+
+@bgColorHtml: #fff;
+@bgColorBody: #fff;
+@bgColorNav: #fff;
+@colorHeader: #fff;
+@colorFooter: #fff;
+@colorBody: #000;
+
+@fontFamilyBody: serif;
+@fontFamilyTitle: serif;
+@fontFamilyNav: serif;
+@fontLogo: serif;
+
+
+html {
+    overflow-y: scroll;
+    background-color: @bgColorHtml;
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+h1 a {
+        text-decoration: none;
+        color: @colorBody;
+    }
+
+// Activate the grid base font
+body {
+    #desinax-hgrid.font(@fontSizeBody);
+    color: @colorBody;
+    background-color: @bgColorBody;
+}
+
+img {
+    max-width: 100%;
+}
+
+// Adapt the typographic grid to my style
+#desinax-hgrid.activateDefaultTypography();
+
+
+h1,h2,h3,h4 {
+    font-family: @fontFamilyTitle;
+}

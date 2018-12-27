@@ -1,0 +1,220 @@
+/**
+ * Layout using vgrid
+ *
+*/
+
+/**
+ * Variables
+ */
+
+/**
+ * General layout
+ */
+
+.row {
+    #desinax-vgrid.row();
+    margin-bottom: 12px;
+}
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+}
+
+//När denna används kommer det en liten liten scroll längst ner. FULT!
+.inner-wrap-header {
+    #desinax-vgrid.grid(100%);
+}
+
+//Denna fixar den lilla fula scrollbaren, fint!
+.inner-wrap-header .row {
+    max-width: 100%;
+    background-color: @bgColorNav;
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    //@gridImage: "../../img/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+
+//Header Layout
+
+.rm-desktop li a {
+    background-color: @bgColorNav;
+    font-family: @fontFamilyNav;
+    color: @colorBody;
+}
+
+.rm-desktop li a:hover {
+    background-color: @bgColorNav;
+    color: @colorBody;
+}
+
+
+.region-header-col-1,
+.region-header-col-3 {
+    #desinax-vgrid.column(5); //detta anger bredd = 5 kolumner för sidmenyerna, var och en
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(14); //detta anger bredd 14 kolumner, vilket är totala antalet klumner 24 - två sidmenyer (5+5) = 10,  24-10 = 14 kolumner kvar till mittenkolumnen
+}
+
+.site-logo {
+    display: none;
+}
+
+.site-logo-text a {
+    font-family: @fontLogo;
+    color: @colorBody;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.region-flash {
+    #desinax-vgrid.column(@columns); //anger bredden som finns i variabeln columns = 24, alltså full bredd.
+}
+
+// Breadcrumb layout
+
+.region-breadcrumb {
+    #desinax-vgrid.column(@columns);
+}
+
+.breadcrumb-list {
+    a {
+        font-size: 0.8em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+    }
+}
+
+//Main and sidebar layout
+
+.region-main {
+    #desinax-vgrid.column(@columns * 3 / 4); //Anger bredd tre fjärdedelar av värdet i variabeln columns vilket är 24. Så 3/4 av 24 = 18 kolumner bredd.
+    #desinax-vgrid.push(2);
+
+    &.has-sidebar {
+    #desinax-vgrid.push(0);
+    }
+
+    &.has-sidebar-right {
+    #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns - 10);
+    }
+
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4);
+}
+
+&.has-sidebar-right {
+    #desinax-vgrid.push(1);
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+.next-previous {
+    #desinax-vgrid.column(@columns);
+    // #desinax-vgrid.push();
+        .previous {
+            float: left;
+        }
+
+        .next {
+            float: right;
+        }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.section-header {
+    font-family: @fontFamilyTitle;
+}
+
+//Footer Layout
+
+.outer-wrap-footer {
+    // max-width: 100%;
+    background: linear-gradient(transparent, @bgColorNav);
+}
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+    // padding: 15px;
+}
+
+.site-footer {
+    #desinax-vgrid.column(@columns);
+    text-align: center;
+}
+
+.byline {
+    #desinax-vgrid.column(@columns);
+    // #desinax-vgrid.push(3);
+    // display: block;
+    // margin: 0px;
+    // box-shadow: 1px 1px 20px #8C728C;
+    // overflow: auto;
+}
+
+// .byline p {
+//     #desinax-vgrid.column(@columns);
+// }
+
+// Responsive 1, 2, 3
+
+@media screen and (max-width: 790px) {
+    .region-main {
+        #desinax-vgrid.column(@columns * 3 / 4);
+    }
+
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left,
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+}
+
+@media screen and (max-width: 766px) {
+    .region-main.has-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-right {
+        #desinax-vgrid.push(0);
+    }
+
+    .footer-column {
+        #desinax-vgrid.column(@columns);
+    }
+}

@@ -74,6 +74,11 @@ return [
             "title" => "Testa saker.",
         ],
         [
+            "text" => "Blogg",
+            "url" => "blogg",
+            "title" => "Bildblogg",
+        ],
+        [
             "text" => "Rapport",
             "url" => "rapport",
             "title" => "Rapporter från kursmomenten.",
@@ -83,6 +88,11 @@ return [
                         "text" => "Kmom04",
                         "url" => "rapport/fargschema",
                         "title" => "Rapport för kmom04.",
+                    ],
+                    [
+                        "text" => "Kmom05",
+                        "url" => "rapport/laddningstid",
+                        "title" => "Rapport för kmom05.",
                     ],
                 ],
             ],
