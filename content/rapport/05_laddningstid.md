@@ -88,7 +88,7 @@ Jag anser att en snabb sida laddas på ett par sekunder men kan även tycka att 
 
 Referenser
 -----------------------
-[Rådata](https://docs.google.com/spreadsheets/d/1_5eTg4k9iBVA3EvQuSCOPJr6hUnmw3x2bbXSRfuszbU/edit#gid=0)
+[Rådata](https://docs.google.com/spreadsheets/d/1_5eTg4k9iBVA3EvQuSCOPJr6hUnmw3x2bbXSRfuszbU/edit?usp=sharing)
 
 
 Övrigt

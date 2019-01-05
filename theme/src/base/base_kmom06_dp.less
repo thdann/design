@@ -14,45 +14,39 @@
 @fontFamilyNav: serif;
 @fontLogo: serif;
 
-
 html {
-    overflow-y: scroll;
-    background-color: @bgColorHtml;
+    background-color: @bgColorBody;
 }
 
-@media (min-width: 64em) {
-  html {
-    font-size: 112.5%;
-  }
+// Activate the grid base font
+body {
+    #desinax-hgrid.font(@fontSizeBody);
+    background: url("../img/tomtebloss.jpg") no-repeat center fixed;
 }
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// Adapt the typographic grid to my style
+#desinax-hgrid.activateDefaultTypography();
 
 h1 a {
         text-decoration: none;
         color: @colorBody;
     }
 
-// Activate the grid base font
-body {
-    #desinax-hgrid.font(@fontSizeBody);
-    color: @colorBody;
-    background-color: @bgColorBody;
-}
-
-img {
-    max-width: 100%;
-}
-
-// Adapt the typographic grid to my style
-#desinax-hgrid.activateDefaultTypography();
-
 
 h1,h2,h3,h4 {
     font-family: @fontFamilyTitle;
+    border-bottom: none;
 }
 
-.rm-max .rm-mobile {
-    background-color: @bgColorNav;
-    a {
-        color: @colorBody;
-    }
+
+@media (min-width: 64em) {
+  html {
+    font-size: 112.5%;
+  }
 }

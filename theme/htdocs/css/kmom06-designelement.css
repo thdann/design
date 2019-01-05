@@ -1,7 +1,7 @@
 /*!
- * Stylesheet for design kmom05.
+ * Stylesheet for design kmom06.
  *
- * This stylesheet is for the design course and kmom05 where we use LESS.
+ * This stylesheet is for the design course and kmom06 Design elements.
  */
 /**
  * Normalize and reset the style.
@@ -4317,6 +4317,18 @@ template {
 /**
  * My Fonts.
  */
+@font-face {
+  font-family: 'Barrio';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Barrio Regular'), local('Barrio-Regular'), url(https://fonts.gstatic.com/s/barrio/v3/wEO8EBXBk8hBIDi0cgwl.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(https://fonts.gstatic.com/s/nanumgothic/v13/PN_3Rfi-oW3hYwmKDpxS7F_D-djb.ttf) format('truetype');
+}
 /**
  * Internal self contained modules, save in directory module/.
  */
@@ -4835,7 +4847,6 @@ figure.figure.right {
  */
 html {
   overflow-y: scroll;
-  background-color: #fff;
 }
 @media (min-width: 64em) {
   html {
@@ -4847,12 +4858,16 @@ h1 a {
   color: #000;
 }
 body {
-  font: 18px/1.33333333 serif;
+  font: 18px/1.33333333 'Nanum Gothic';
   color: #000;
-  background-color: #fff;
+  background: url(https://images.unsplash.com/photo-1516481605912-d34c1411504c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) fixed;
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 img {
   max-width: 100%;
+  border: 6px dotted black;
 }
 h1,
 h2,
@@ -5142,13 +5157,26 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: sans-serif;
+  font-family: 'Barrio';
+  border-bottom: none;
+  text-decoration: underline;
 }
-.rm-max .rm-mobile {
-  background-color: #AAB3FA;
+h1,
+h4 {
+  text-decoration-style: wavy;
+}
+h2 {
+  text-decoration-style: dotted;
+}
+h3 {
+  text-decoration-style: dashed;
 }
 .rm-max .rm-mobile a {
   color: #000;
+  background-color: #fff;
+}
+.region-flash img {
+  display: none;
 }
 /**
  * Import the vertical grid.
@@ -5213,10 +5241,10 @@ h4 {
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
+  background-color: #fff;
 }
 .inner-wrap-header .row {
   max-width: 100%;
-  background-color: #AAB3FA;
 }
 .vgrid .inner-wrap {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
@@ -5237,13 +5265,13 @@ h4 {
   }
 }
 .rm-desktop li a {
-  background-color: #AAB3FA;
-  font-family: serif;
+  font-family: 'Barrio';
   color: #000;
+  background-color: #fff;
 }
 .rm-desktop li a:hover {
-  background-color: #AAB3FA;
-  color: #000;
+  background-color: #fff;
+  font-weight: bold;
 }
 .region-header-col-1,
 .region-header-col-3 {
@@ -5259,15 +5287,13 @@ h4 {
   width: 57.29166667%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 21.35416667%;
 }
 .site-logo {
   display: none;
 }
-.site-logo-text a {
-  font-family: serif;
-  color: #000;
-  font-size: 2em;
-  text-decoration: none;
+.site-logo-text {
+  display: none;
 }
 .region-flash {
   display: inline;
@@ -5287,7 +5313,6 @@ h4 {
   font-size: 0.8em;
 }
 .breadcrumb-list ul {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -5295,6 +5320,7 @@ h4 {
   display: inline-block;
 }
 .region-main {
+  background-color: hsla(0, 0%, 100%, 0.7);
   display: inline;
   float: left;
   width: 73.95833333%;
@@ -5351,15 +5377,24 @@ h4 {
 .next-previous .next {
   float: right;
 }
-ul {
-  list-style-type: none;
-  padding: 0px;
-}
 .section-header {
-  font-family: sans-serif;
+  font-family: 'Barrio';
+}
+ul li .section-header {
+  list-style-type: none;
+}
+.wrap-sidebar {
+  background-color: hsla(0, 0%, 100%, 0.7);
+}
+.wrap-sidebar a {
+  color: #000;
+  text-decoration: none;
+}
+.wrap-sidebar a:hover {
+  font-weight: bold;
 }
 .outer-wrap-footer {
-  background: linear-gradient(transparent, #AAB3FA);
+  background-color: hsla(0, 0%, 100%, 0.7);
 }
 .footer-column {
   display: inline;
@@ -5489,3 +5524,7 @@ ul {
 /**
  * My own settings, not currently in their own module.
  */
+img {
+  border: 6px dotted #000;
+  padding: 2px;
+}

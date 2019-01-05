@@ -1,5 +1,8 @@
 Revision history
 ========================
+v6.0.0 (2019-01-05)
+
+Final version of Kmom06 - design principles
 
 v5.0.0 (2018-12-27)
 

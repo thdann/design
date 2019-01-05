@@ -1,3 +1,7 @@
-#### Footer col 3
+#### Här är ännu fler länktips
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+[ving.se](https://www.ving.se/)
+
+[yogashala.se](https://yogashalastockholm.se/)
+
+[bth.se](https://www.bth.se/)

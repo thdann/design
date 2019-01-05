@@ -5144,6 +5144,12 @@ h3,
 h4 {
   font-family: sans-serif;
 }
+.rm-max .rm-mobile {
+  background-color: #AAB3FA;
+}
+.rm-max .rm-mobile a {
+  color: #000;
+}
 /**
  * Import the vertical grid.
  */

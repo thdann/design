@@ -1,7 +1,7 @@
 /*!
- * Stylesheet for design kmom05.
+ * Stylesheet for design kmom06.
  *
- * This stylesheet is for the design course and kmom05 where we use LESS.
+ * This stylesheet is for the design course and kmom06 Design principles.
  */
 /**
  * Normalize and reset the style.
@@ -4317,6 +4317,18 @@ template {
 /**
  * My Fonts.
  */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8D.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v5/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+}
 /**
  * Internal self contained modules, save in directory module/.
  */
@@ -4834,25 +4846,16 @@ figure.figure.right {
  * Base style to affect HTML elements on a general scale.
  */
 html {
-  overflow-y: scroll;
   background-color: #fff;
-}
-@media (min-width: 64em) {
-  html {
-    font-size: 112.5%;
-  }
-}
-h1 a {
-  text-decoration: none;
-  color: #000;
 }
 body {
-  font: 18px/1.33333333 serif;
-  color: #000;
-  background-color: #fff;
+  font: 18px/1.33333333 'Poppins';
+  background: url("../img/tomtebloss.jpg") no-repeat center fixed;
 }
 img {
   max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h1,
 h2,
@@ -5138,17 +5141,21 @@ hr::after {
   padding: 0 0.25em;
   background-color: #fff;
 }
+h1 a {
+  text-decoration: none;
+  color: #000;
+}
 h1,
 h2,
 h3,
 h4 {
-  font-family: sans-serif;
+  font-family: 'Oswald';
+  border-bottom: none;
 }
-.rm-max .rm-mobile {
-  background-color: #AAB3FA;
-}
-.rm-max .rm-mobile a {
-  color: #000;
+@media (min-width: 64em) {
+  html {
+    font-size: 112.5%;
+  }
 }
 /**
  * Import the vertical grid.
@@ -5197,7 +5204,6 @@ h4 {
   width: 101.04166667%;
   margin-left: -0.52083333%;
   margin-right: -0.52083333%;
-  margin-bottom: 12px;
 }
 .row::after {
   content: "";
@@ -5209,6 +5215,17 @@ h4 {
   margin-left: auto;
   max-width: 1100px;
 }
+.outer-wrap-header {
+  display: block;
+  width: 101.04166667%;
+  margin-left: -0.52083333%;
+  margin-right: -0.52083333%;
+}
+.outer-wrap-header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .inner-wrap-header {
   margin-right: auto;
   margin-left: auto;
@@ -5216,7 +5233,6 @@ h4 {
 }
 .inner-wrap-header .row {
   max-width: 100%;
-  background-color: #AAB3FA;
 }
 .vgrid .inner-wrap {
   background: url("../img/grid_24x30x10-nomargin.png") repeat-y scroll center center;
@@ -5236,15 +5252,6 @@ h4 {
     background-size: 100% auto;
   }
 }
-.rm-desktop li a {
-  background-color: #AAB3FA;
-  font-family: serif;
-  color: #000;
-}
-.rm-desktop li a:hover {
-  background-color: #AAB3FA;
-  color: #000;
-}
 .region-header-col-1,
 .region-header-col-3 {
   display: inline;
@@ -5256,17 +5263,23 @@ h4 {
 .region-header-col-2 {
   display: inline;
   float: left;
-  width: 57.29166667%;
+  width: 78.125%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 21.35416667%;
+  font-family: 'Poppins';
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #fff;
 }
-.site-logo {
+.site-logo,
+.site-logo-text a {
   display: none;
 }
-.site-logo-text a {
-  font-family: serif;
-  color: #000;
-  font-size: 2em;
+.rm-desktop li a:hover {
+  background-color: hsla(0, 0%, 100%, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-weight: bold;
   text-decoration: none;
 }
 .region-flash {
@@ -5276,23 +5289,11 @@ h4 {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
+.region-flash img {
+  display: none;
+}
 .region-breadcrumb {
-  display: inline;
-  float: left;
-  width: 98.95833333%;
-  margin-left: 0.52083333%;
-  margin-right: 0.52083333%;
-}
-.breadcrumb-list a {
-  font-size: 0.8em;
-}
-.breadcrumb-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.breadcrumb-list li {
-  display: inline-block;
+  display: none;
 }
 .region-main {
   display: inline;
@@ -5300,7 +5301,7 @@ h4 {
   width: 73.95833333%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
-  margin-left: 8.85416667%;
+  margin-left: 13.02083333%;
 }
 .region-main.has-sidebar {
   margin-left: 0.52083333%;
@@ -5338,6 +5339,11 @@ h4 {
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
 }
+.inner-wrap-main {
+  background-color: hsla(0, 0%, 100%, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .next-previous {
   display: inline;
   float: left;
@@ -5356,17 +5362,24 @@ ul {
   padding: 0px;
 }
 .section-header {
-  font-family: sans-serif;
+  font-family: 'Oswald';
 }
-.outer-wrap-footer {
-  background: linear-gradient(transparent, #AAB3FA);
+.section-header a {
+  color: #000;
+  text-decoration: none;
+}
+.region-footer,
+.region-footer a,
+.region-footer a:visited {
+  color: #fff;
 }
 .footer-column {
   display: inline;
   float: left;
-  width: 32.29166667%;
+  width: 28.125%;
   margin-left: 0.52083333%;
   margin-right: 0.52083333%;
+  margin-left: 4.6875%;
 }
 .site-footer {
   display: inline;

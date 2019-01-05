@@ -1,0 +1,210 @@
+/**
+ * Layout using vgrid
+ *
+*/
+
+/**
+ * Variables
+ */
+
+/**
+ * General layout
+ */
+
+.row {
+    #desinax-vgrid.row();
+}
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+}
+
+.outer-wrap-header {
+    #desinax-vgrid.row(@columns);
+}
+
+//När denna används kommer det en liten liten scroll längst ner. FULT!
+.inner-wrap-header {
+    #desinax-vgrid.grid(100%);
+}
+
+//Denna fixar den lilla fula scrollbaren, fint!
+.inner-wrap-header .row {
+    max-width: 100%;
+}
+
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    //@gridImage: "../../img/grid_12x60x20-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+//Header Layout
+
+.region-header-col-1,
+.region-header-col-3 {
+    #desinax-vgrid.column(5);
+}
+
+.region-header-col-2 {
+    #desinax-vgrid.column(19);
+    #desinax-vgrid.push(5);
+    font-family: @fontFamilyNav;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #fff;
+}
+
+.site-logo,
+.site-logo-text a {
+    display: none;
+}
+
+.rm-desktop li a:hover {
+    background-color: hsla(0, 100%, 100%, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+//Flash region
+
+.region-flash {
+    #desinax-vgrid.column(@columns); //anger bredden som finns i variabeln columns = 24, alltså full bredd.
+    img {
+        display: none;
+    }
+}
+
+
+// Breadcrumb layout
+
+.region-breadcrumb {
+    display: none;
+}
+
+//Main and sidebar layout
+
+.region-main {
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(3);
+
+    &.has-sidebar {
+    #desinax-vgrid.push(0);
+    }
+
+    &.has-sidebar-right {
+    #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    }
+
+    &.has-sidebar-left.has-sidebar-right {
+        #desinax-vgrid.column(@columns - 10);
+    }
+
+}
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4);
+}
+
+&.has-sidebar-right {
+    #desinax-vgrid.push(1);
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+.inner-wrap-main {
+    background-color: hsla(0, 100%, 100%, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.next-previous {
+    #desinax-vgrid.column(@columns);
+    // #desinax-vgrid.push();
+        .previous {
+            float: left;
+        }
+
+        .next {
+            float: right;
+        }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.section-header {
+    font-family: @fontFamilyTitle;
+    a {
+        color: @colorBody;
+        text-decoration: none;
+    }
+}
+
+//Footer Layout
+
+.region-footer,
+.region-footer a,
+.region-footer a:visited {
+    color: @bgColorBody;
+}
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3 - 1);
+    #desinax-vgrid.push(1);
+}
+
+.site-footer {
+    #desinax-vgrid.column(@columns);
+    text-align: center;
+}
+
+.byline {
+    #desinax-vgrid.column(@columns);
+}
+
+
+// Responsive 1, 2, 3
+
+@media screen and (max-width: 790px) {
+    .region-main {
+        #desinax-vgrid.column(@columns * 3 / 4);
+    }
+
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left,
+    .region-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+}
+
+@media screen and (max-width: 766px) {
+    .region-main.has-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-right {
+        #desinax-vgrid.push(0);
+    }
+
+    .footer-column {
+        #desinax-vgrid.column(@columns);
+    }
+}
