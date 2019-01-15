@@ -110,6 +110,11 @@ return [
                         "url" => "rapport/designprinciper",
                         "title" => "Desigprinciper",
                     ],
+                    [
+                        "text" => "Kmom10",
+                        "url" => "rapport/webbplatsdesign",
+                        "title" => "Rapport för Kmom10",
+                    ],
                 ],
             ],
         ],
